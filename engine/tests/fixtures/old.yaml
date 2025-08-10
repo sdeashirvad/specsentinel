@@ -1,0 +1,94 @@
+openapi: "3.0.0"
+info:
+  title: E-Commerce API
+  version: "2.0.0"
+paths:
+  /users:
+    post:
+      summary: Create a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, username]
+              properties:
+                email:
+                  type: string
+                username:
+                  type: string
+                full_name:
+                  type: string
+      responses:
+        "201":
+          description: User created
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [id, email, username]
+                properties:
+                  id:
+                    type: string
+                  email:
+                    type: string
+                  username:
+                    type: string
+                  full_name:
+                    type: string
+  /products/{id}:
+    get:
+      summary: Get a product
+      responses:
+        "200":
+          description: Product details
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [id, name, price]
+                properties:
+                  id:
+                    type: string
+                  name:
+                    type: string
+                  price:
+                    type: number
+                  discount_price:
+                    type: number
+                  in_stock:
+                    type: boolean
+        "404":
+          description: Not found
+    delete:
+      summary: Delete a product
+      responses:
+        "204":
+          description: Deleted
+        "404":
+          description: Not found
+  /orders:
+    post:
+      summary: Place an order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [user_id, product_ids]
+              properties:
+                user_id:
+                  type: string
+                product_ids:
+                  type: array
+                  items:
+                    type: string
+                coupon_code:
+                  type: string
+      responses:
+        "201":
+          description: Order placed
+        "400":
+          description: Invalid request

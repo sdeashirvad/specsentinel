@@ -1,0 +1,12 @@
+approvedChanges:
+  - type: endpointRemoved
+    path: "/products/{id}"
+    owner: "platform-team"
+    approvedBy: "architecture-board"
+    reason: "Products endpoint migrated to Catalog Service v2."
+    expires: "2027-06-01"
+    createdAt: "2026-01-15"
+
+suppressions:
+  - rule: ENDPOINT_ADDED
+    reason: "Additive endpoints never break existing consumers"

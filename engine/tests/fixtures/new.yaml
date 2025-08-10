@@ -1,0 +1,65 @@
+openapi: "3.0.0"
+info:
+  title: E-Commerce API
+  version: "3.0.0"
+paths:
+  /users:
+    post:
+      summary: Create a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [username]
+              properties:
+                username:
+                  type: string
+                full_name:
+                  type: string
+      responses:
+        "201":
+          description: User created
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [id, username]
+                properties:
+                  id:
+                    type: string
+                  username:
+                    type: string
+                  full_name:
+                    type: string
+  /orders:
+    post:
+      summary: Place an order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [user_id, product_ids]
+              properties:
+                user_id:
+                  type: string
+                product_ids:
+                  type: array
+                  items:
+                    type: string
+                coupon_code:
+                  type: string
+      responses:
+        "201":
+          description: Order placed
+        "400":
+          description: Invalid request
+  /inventory:
+    get:
+      summary: Get inventory levels
+      responses:
+        "200":
+          description: Inventory data

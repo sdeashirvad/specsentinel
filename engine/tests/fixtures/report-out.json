@@ -1,0 +1,145 @@
+{
+  "reportVersion": "1.0",
+  "generatedAt": "2026-06-26T10:37:00.056Z",
+  "toolVersion": "1.0.0",
+  "riskScore": 85,
+  "riskLevel": "HIGH",
+  "riskBreakdown": [
+    {
+      "changeType": "endpoint-removed",
+      "label": "endpoint-removed",
+      "count": 1,
+      "weight": 40,
+      "contribution": 40
+    },
+    {
+      "changeType": "response-field-removed",
+      "label": "response-field-removed",
+      "count": 1,
+      "weight": 25,
+      "contribution": 25
+    },
+    {
+      "changeType": "request-field-removed",
+      "label": "request-field-removed",
+      "count": 1,
+      "weight": 20,
+      "contribution": 20
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "breaking": 3,
+    "nonBreaking": 1,
+    "bySeverity": {
+      "HIGH": 2,
+      "MEDIUM": 1,
+      "LOW": 0,
+      "INFO": 1
+    }
+  },
+  "metadata": {
+    "oldTitle": "E-Commerce API",
+    "newTitle": "E-Commerce API",
+    "oldVersion": "2.0.0",
+    "newVersion": "3.0.0",
+    "timestamp": "2026-06-26T10:37:00.055Z"
+  },
+  "changes": [
+    {
+      "type": "request-field-removed",
+      "severity": "MEDIUM",
+      "breaking": true,
+      "path": "/users",
+      "method": "post",
+      "description": "Field \"email\" removed from request body",
+      "oldValue": "string"
+    },
+    {
+      "type": "response-field-removed",
+      "severity": "HIGH",
+      "breaking": true,
+      "path": "/users",
+      "method": "post",
+      "description": "Field \"email\" removed from response 201",
+      "oldValue": "string"
+    },
+    {
+      "type": "endpoint-removed",
+      "severity": "HIGH",
+      "breaking": true,
+      "path": "/products/{id}",
+      "description": "Endpoint \"/products/{id}\" was removed"
+    },
+    {
+      "type": "endpoint-added",
+      "severity": "INFO",
+      "breaking": false,
+      "path": "/inventory",
+      "description": "Endpoint \"/inventory\" was added"
+    }
+  ],
+  "impacts": [
+    {
+      "change": {
+        "type": "request-field-removed",
+        "severity": "MEDIUM",
+        "breaking": true,
+        "path": "/users",
+        "method": "post",
+        "description": "Field \"email\" removed from request body",
+        "oldValue": "string"
+      },
+      "impacts": [
+        "Clients sending \"email\" in the request body will have that field silently ignored or may receive validation errors.",
+        "SDK models and request builders that include \"email\" must be updated.",
+        "Generated client libraries will need regeneration."
+      ]
+    },
+    {
+      "change": {
+        "type": "response-field-removed",
+        "severity": "HIGH",
+        "breaking": true,
+        "path": "/users",
+        "method": "post",
+        "description": "Field \"email\" removed from response 201",
+        "oldValue": "string"
+      },
+      "impacts": [
+        "Frontend clients that read \"email\" from the response will encounter undefined/null values and may crash.",
+        "Any UI components, reports, or logic depending on \"email\" must be audited.",
+        "SDKs and generated types must be regenerated to remove this field.",
+        "Consumer services that map this field to their own data models require updates."
+      ]
+    },
+    {
+      "change": {
+        "type": "endpoint-removed",
+        "severity": "HIGH",
+        "breaking": true,
+        "path": "/products/{id}",
+        "description": "Endpoint \"/products/{id}\" was removed"
+      },
+      "impacts": [
+        "All clients calling /products/{id} will receive 404 errors.",
+        "Any SDK methods targeting this endpoint must be removed or stubbed before deploying.",
+        "Integration tests and health checks covering this endpoint will fail.",
+        "Downstream services that depend on this route must be updated."
+      ]
+    },
+    {
+      "change": {
+        "type": "endpoint-added",
+        "severity": "INFO",
+        "breaking": false,
+        "path": "/inventory",
+        "description": "Endpoint \"/inventory\" was added"
+      },
+      "impacts": [
+        "No existing consumers are affected — this is a purely additive change.",
+        "New clients can begin using this endpoint immediately after deployment."
+      ]
+    }
+  ]
+}
