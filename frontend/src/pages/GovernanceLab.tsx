@@ -209,9 +209,9 @@ export function GovernanceLab() {
                   setConfigYaml(e.target.value)
                   setParseError(null)
                 }}
-                rows={18}
+                rows={12}
                 spellCheck={false}
-                className="w-full p-4 text-xs font-mono bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300 resize-none focus:outline-none leading-relaxed"
+                className="w-full p-4 text-xs font-mono bg-white dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300 resize-none focus:outline-none leading-relaxed min-h-[12rem] lg:min-h-[24rem]"
                 placeholder="Paste your specguard.yml here or pick an example above…"
               />
             </div>

@@ -1,0 +1,10 @@
+# SpecSentinel — https://specsentinel.sdeashirvad.com/
+# SDEAshirvad Labs product
+
+User-agent: *
+Allow: /
+
+# Studio is a public interactive demo — indexable
+Allow: /studio
+
+Sitemap: https://specsentinel.sdeashirvad.com/sitemap.xml

@@ -33,8 +33,8 @@ export function Header() {
           <div className="w-7 h-7 rounded-md bg-indigo-600 flex items-center justify-center shrink-0">
             <Shield className="w-4 h-4 text-white" />
           </div>
-          <div className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-2.5">
-            <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 tracking-tight">
+          <div className="flex flex-col sm:flex-row sm:items-baseline gap-0.5 sm:gap-2.5 min-w-0">
+            <span className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 tracking-tight truncate">
               SpecSentinel Studio
             </span>
             {!reportOnlyView && !isWebviewOnly && (
@@ -66,7 +66,7 @@ export function Header() {
           </span>
           <button
             onClick={() => setDark(d => !d)}
-            className="w-8 h-8 rounded-md border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 hover:border-zinc-400 dark:hover:border-zinc-500 transition-colors"
+            className="w-11 h-11 rounded-md border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 hover:border-zinc-400 dark:hover:border-zinc-500 transition-colors"
             aria-label="Toggle theme"
           >
             {dark ? <Sun className="w-3.5 h-3.5" /> : <Moon className="w-3.5 h-3.5" />}

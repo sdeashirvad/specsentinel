@@ -162,7 +162,7 @@ export function PRCommentPreview() {
                   <span className="text-xs font-mono text-zinc-400">PR Comment — Raw Markdown</span>
                   <span className="text-[10px] text-zinc-600">{comment.length.toLocaleString()} chars</span>
                 </div>
-                <pre className="p-5 text-[11px] font-mono leading-relaxed text-zinc-300 overflow-auto max-h-[600px] whitespace-pre-wrap">
+                <pre className="p-5 text-[11px] font-mono leading-relaxed text-zinc-300 overflow-x-auto max-h-[400px] sm:max-h-[600px] whitespace-pre-wrap">
                   {comment}
                 </pre>
               </div>

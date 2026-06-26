@@ -1,0 +1,26 @@
+{
+  "name": "SpecSentinel",
+  "short_name": "SpecSentinel",
+  "description": "Catch API breaking changes before production. OpenAPI contract diff, risk scoring, governance, and CI integration.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "lang": "en-US",
+  "categories": ["developer", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

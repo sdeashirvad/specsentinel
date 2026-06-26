@@ -232,8 +232,8 @@ function ContractArea({ label, labelClass, placeholder, value, onChange, fileRef
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="flex-1 w-full p-4 text-xs font-mono bg-transparent text-zinc-800 dark:text-zinc-300 placeholder-zinc-300 dark:placeholder-zinc-600 resize-none focus:outline-none leading-relaxed"
-        rows={20}
+        className="flex-1 w-full p-4 text-xs font-mono bg-transparent text-zinc-800 dark:text-zinc-300 placeholder-zinc-300 dark:placeholder-zinc-600 resize-none focus:outline-none leading-relaxed min-h-[12rem] sm:min-h-[16rem] lg:min-h-[28rem]"
+        rows={12}
         spellCheck={false}
       />
     </div>

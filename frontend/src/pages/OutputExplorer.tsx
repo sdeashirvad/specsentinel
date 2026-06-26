@@ -113,7 +113,7 @@ export function OutputExplorer() {
                 </div>
                 <span className="text-[10px] text-zinc-600">{current.length.toLocaleString()} chars · {current.split('\n').length} lines</span>
               </div>
-              <pre className="p-5 text-[11px] font-mono leading-relaxed text-zinc-300 overflow-auto max-h-[600px] whitespace-pre">
+              <pre className="p-5 text-[11px] font-mono leading-relaxed text-zinc-300 overflow-x-auto max-h-[400px] sm:max-h-[600px] whitespace-pre">
                 {current}
               </pre>
             </div>
@@ -219,7 +219,7 @@ function HtmlPreview({ html }: { html: string }) {
         />
       ) : (
         <div className="bg-zinc-950">
-          <pre className="p-5 text-[10px] font-mono leading-relaxed text-zinc-300 overflow-auto max-h-[600px] whitespace-pre">
+          <pre className="p-5 text-[10px] font-mono leading-relaxed text-zinc-300 overflow-x-auto max-h-[400px] sm:max-h-[600px] whitespace-pre">
             {html}
           </pre>
         </div>

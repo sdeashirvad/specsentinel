@@ -237,7 +237,7 @@ function JsonView({ jsonStr }: { jsonStr: string }) {
         <span className="text-xs font-mono text-zinc-400">report.json</span>
         <span className="text-[10px] text-zinc-600">{jsonStr.length.toLocaleString()} bytes · {lines.length} lines</span>
       </div>
-      <pre className="p-5 overflow-auto text-[11px] font-mono leading-relaxed max-h-[600px]">
+      <pre className="p-5 overflow-x-auto text-[11px] font-mono leading-relaxed max-h-[400px] sm:max-h-[600px]">
         {lines.map((line, i) => (
           <div key={i}>{colorize(line)}</div>
         ))}

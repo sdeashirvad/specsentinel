@@ -21,12 +21,16 @@ export function WebViewBanner({ meta }: Props) {
           <span className="text-xs font-semibold text-indigo-300">Local WebView</span>
         </div>
         <div className="h-3 w-px bg-indigo-800/60 hidden sm:block" />
-        <div className="flex items-center gap-4 flex-wrap text-[11px] text-indigo-400/80 font-mono">
-          <span>{meta.oldPath} → {meta.newPath}</span>
+        <div className="flex items-center gap-4 flex-wrap text-[11px] text-indigo-400/80 font-mono min-w-0">
+          <span className="truncate max-w-[200px] sm:max-w-none" title={`${meta.oldPath} → ${meta.newPath}`}>
+            {meta.oldPath} → {meta.newPath}
+          </span>
           {meta.configPath && (
             <>
-              <span className="text-indigo-700">·</span>
-              <span>governance: {meta.configPath}</span>
+              <span className="text-indigo-700 hidden sm:inline">·</span>
+              <span className="truncate max-w-[160px] sm:max-w-none" title={meta.configPath}>
+                governance: {meta.configPath}
+              </span>
             </>
           )}
           <span className="text-indigo-700">·</span>

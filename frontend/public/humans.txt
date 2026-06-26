@@ -1,0 +1,10 @@
+/* TEAM */
+Product: SpecSentinel
+Studio: SpecSentinel Studio
+Organization: SDEAshirvad Labs — https://labs.sdeashirvad.com/
+Creator: Ashirvad Kumar Pandey — https://sdeashirvad.com/
+
+/* SITE */
+Standards: HTML5, CSS3, JSON-LD (schema.org)
+Software: React, TypeScript, Vite, Tailwind CSS
+Last update: 2026-06-26

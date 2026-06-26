@@ -1,0 +1,33 @@
+# SpecSentinel
+
+> Catch API breaking changes before production.
+
+SpecSentinel compares OpenAPI contracts, calculates deployment risk, enforces governance rules via specguard.yml, and reviews changes locally, in CI, or in GitHub pull requests.
+
+A product of SDEAshirvad Labs by Ashirvad Kumar Pandey.
+
+## Canonical URLs
+
+- Homepage: https://specsentinel.sdeashirvad.com/
+- Studio (interactive demo): https://specsentinel.sdeashirvad.com/studio
+- SDEAshirvad Labs: https://labs.sdeashirvad.com/
+
+## Official references
+
+- GitHub: https://github.com/sdeashirvad/specsentinel
+- npm: https://www.npmjs.com/package/specsentinel
+- Documentation: https://github.com/sdeashirvad/specsentinel/blob/main/README.md
+- Install: npm install -g specsentinel
+
+## Related SDEAshirvad Labs products
+
+- GoForge: https://goforge.sdeashirvad.com/
+- ChatLoom: https://chatloom.sdeashirvad.com/
+- PNLGuard: https://pnlgaurd.sdeashirvad.com/
+- Bloom: https://bloom.sdeashirvad.com/
+- SentryAI: https://sentryai.sdeashirvad.com/
+- Veera: https://veera.sdeashirvad.com/
+
+## Sitemap
+
+- https://specsentinel.sdeashirvad.com/sitemap.xml

@@ -214,7 +214,7 @@ export function ContractPlayground() {
             <div className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
               v{activeResult.engineVersion} · {activeResult.durationMs}ms
             </div>
-            <div className="ml-auto flex items-center gap-2 flex-wrap">
+            <div className="w-full sm:w-auto sm:ml-auto flex items-center gap-2 flex-wrap justify-start sm:justify-end">
               <QuickNavBtn icon={FileJson} label="Report" onClick={() => studio.navigateTo('report')} />
               <QuickNavBtn icon={Shield} label="Governance" onClick={() => studio.navigateTo('governance')} />
               <QuickNavBtn icon={Layers} label="Outputs" onClick={() => studio.navigateTo('output')} />

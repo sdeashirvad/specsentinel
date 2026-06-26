@@ -95,7 +95,7 @@ export function ArchitectureView() {
   ]
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-8 space-y-8 sm:space-y-10">
       <div className="space-y-1">
         <h1 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 tracking-tight flex items-center gap-2">
           <Network className="w-5 h-5 text-indigo-500" />

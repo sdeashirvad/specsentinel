@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { BRAND } from './tokens'
 
 export function LabFooter() {
@@ -27,9 +28,12 @@ export function LabFooter() {
             <a href={BRAND.npmUrl} className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" target="_blank" rel="noreferrer">
               npm v{BRAND.npmVersion}
             </a>
-            <a href="/studio" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-              Studio
+            <a href={BRAND.docsUrl} className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors" target="_blank" rel="noreferrer">
+              Docs
             </a>
+            <Link to="/studio" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+              Studio
+            </Link>
           </div>
         </div>
         <p className="mt-8 text-[10px] text-zinc-400 dark:text-zinc-600">

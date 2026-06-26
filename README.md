@@ -261,12 +261,6 @@ The adapter interface (`RunDiffOptions` → `RunDiffResult`) is identical for bo
 └── README.md
 ```
 
-## Future Roadmap
+## Roadmap
 
-- [ ] Publish `specsentinel` on npm
-- [ ] `$ref` deep resolution across components
-- [ ] `allOf` / `oneOf` / `anyOf` schema merging
-- [ ] GitHub Actions integration example
-- [ ] VS Code extension
-- [ ] Upload custom spec files in the dashboard
-- [ ] Diff history and saved comparisons
+See [ROADMAP.md](./ROADMAP.md) for planned development phases and upcoming features.
